@@ -12,7 +12,7 @@ import "./App.css";
 const socket = io.connect("http://localhost:8080");
 function App() {
   const [me, setMe] = useState("");
-  const [stream, setStream] = useState(null);
+  const [stream, setStream] = useState();
   const [receivingCall, setReceivingCall] = useState(false);
   const [caller, setCaller] = useState("");
   const [callerSignal, setCallerSignal] = useState();
