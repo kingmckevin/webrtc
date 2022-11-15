@@ -9,7 +9,9 @@ import Peer from "simple-peer";
 import io from "socket.io-client";
 import "./App.css";
 
-const socket = io.connect("http://localhost:8080");
+const socket = io.connect("https://webrtc-api.onrender.com/", {
+  transport: ["websocket"],
+});
 function App() {
   const [me, setMe] = useState("");
   const [stream, setStream] = useState();
@@ -94,7 +96,7 @@ function App() {
 
   return (
     <>
-      <h1 style={{ textAlign: "center", color: "#fff" }}>Zoomish</h1>
+      <h1 style={{ textAlign: "center", color: "#fff" }}>WebRTC</h1>
       <div className="container">
         <div className="video-container">
           <div className="video">
