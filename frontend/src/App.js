@@ -31,7 +31,9 @@ function App() {
       .getUserMedia({ video: true, audio: true })
       .then((stream) => {
         setStream(stream);
-        myVideo.srcObject = stream;
+        console.log(stream);
+        myVideo.current.srcObject = stream;
+        myVideo.current.play();
       });
 
     socket.on("me", (id) => {
