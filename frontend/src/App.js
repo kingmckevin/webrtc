@@ -98,19 +98,19 @@ function App() {
 
   return (
     <>
-      <h1 style={{ textAlign: "center", color: "#fff" }}>WebRTC</h1>
+      <h1 style={{ textAlign: "center", color: "black" }}>WebRTC video chat</h1>
       <div className="container">
         <div className="video-container">
           <div className="video">
-            {stream && (
+            {
               <video
                 playsInline
                 muted
                 ref={myVideo}
                 autoPlay
-                style={{ width: "300px" }}
+                style={{ width: "200px" }}
               />
-            )}
+            }
           </div>
           <div className="video">
             {callAccepted && !callEnded ? (
@@ -118,7 +118,7 @@ function App() {
                 playsInline
                 ref={userVideo}
                 autoPlay
-                style={{ width: "300px" }}
+                style={{ width: "500px" }}
               />
             ) : null}
           </div>
