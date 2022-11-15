@@ -20,7 +20,7 @@ function App() {
   const [idToCall, setIdToCall] = useState("");
   const [callEnded, setCallEnded] = useState(false);
   const [name, setName] = useState("");
-  const myVideo = useRef();
+  const myVideo = useRef(null);
   const userVideo = useRef();
   const connectionRef = useRef();
 
