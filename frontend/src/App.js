@@ -22,7 +22,7 @@ function App() {
   const [idToCall, setIdToCall] = useState("");
   const [callEnded, setCallEnded] = useState(false);
   const [name, setName] = useState("");
-  const myVideo = useRef(null);
+  const myVideo = useRef();
   const userVideo = useRef();
   const connectionRef = useRef();
 
@@ -31,7 +31,7 @@ function App() {
       .getUserMedia({ video: true, audio: true })
       .then((stream) => {
         setStream(stream);
-        myVideo.current.srcObject = stream;
+        myVideo.srcObject = stream;
       });
 
     socket.on("me", (id) => {
